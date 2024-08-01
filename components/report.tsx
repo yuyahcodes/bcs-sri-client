@@ -93,7 +93,7 @@ const Report: React.FC = () => {
     return (
         <div className="flex-1 space-y-4 p-4 pt-6 md:p-8">
             <h2 className="text-3xl font-bold tracking-tight mb-6">Reports</h2>
-            <Tabs defaultValue="auto-generated" value={activeTab} onValueChange={setActiveTab}>
+            <Tabs defaultValue="auto-generated" value={activeTab} onValueChange={(value) => setActiveTab(value as 'auto-generated' | 'filtered')}>
                 <TabsList className="mb-4">
                     <TabsTrigger value="auto-generated">Auto-Generated Report</TabsTrigger>
                     <TabsTrigger value="filtered">Filtered Report</TabsTrigger>
