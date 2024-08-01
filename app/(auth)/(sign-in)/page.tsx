@@ -4,8 +4,8 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: 'Authentication',
-  description: 'Authentication forms built using the components.'
+  title: 'Authentication | BCS Sri Lanka Project',
+  description: 'Optimizing Solutions for Identifying Inaccuracies in GESI Conversations in Sri Lanka\n'
 };
 
 export default function AuthenticationPage() {
