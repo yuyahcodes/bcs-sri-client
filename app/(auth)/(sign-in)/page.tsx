@@ -44,10 +44,11 @@ export default function AuthenticationPage() {
                 <h1 className="text-xl text-center font-semibold text-gray-900 dark:text-white">Sign In to your
                   account</h1>
                 <p className="mt-3 text-sm text-center text-gray-500 dark:text-gray-300">
-                  Don't have an account?
-                  <Link className="text-blue-600 dark:text-blue-400" href="/signup"> Sign Up </Link>
-                  for free.
+                  Are You a CSO?
+                  <Link className="text-blue-600 dark:text-blue-400" href="/cso-signin"> Sign In </Link>
+                  Here.
                 </p>
+
               </div>
               {/*<p className='text-sm text-muted-foreground'>*/}
               {/*  Enter your email and password below <br/>*/}
@@ -55,6 +56,11 @@ export default function AuthenticationPage() {
               {/*</p>*/}
             </div>
             <UserAuthForm/>
+            <p className="mt-3 mb-3 text-sm text-center text-gray-500 dark:text-gray-300">
+              Don't have an account?
+              <Link className="text-blue-600 dark:text-blue-400" href="/signup"> Sign Up </Link>
+              for free.
+            </p>
             <p className='px-8 text-center text-sm text-muted-foreground'>
               By clicking login, you agree to our{' '}
               <a

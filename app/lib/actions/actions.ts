@@ -1,7 +1,7 @@
 "use server"
 
 import {signIn, signOut} from "@/auth";
-import {DEFAULT_LOGIN_REDIRECT} from "@/routes";
+import {CSO_LOGIN_REDIRECT, DEFAULT_LOGIN_REDIRECT} from "@/routes";
 import {AuthError} from "next-auth";
 import {LoginSchema, RegisterSchema} from "@/schemas";
 import {TypeOf} from "zod";
@@ -17,6 +17,30 @@ export async function loginAction(formData: TypeOf<typeof LoginSchema>, callback
             username,
             password,
             redirectTo: callbackUrl || DEFAULT_LOGIN_REDIRECT,
+        })
+    } catch (error) {
+        if (error instanceof AuthError) {
+            switch (error.type) {
+                case "CredentialsSignin":
+                    return {error: "Invalid credentials!"}
+                default:
+                    return {error: "Wrong Username or Password"}
+            }
+        }
+        throw error;
+    }
+}
+
+export async function csoLoginAction(formData: TypeOf<typeof LoginSchema>, callbackUrl?: string) {
+    const validatedFields = LoginSchema.parse(formData);
+    // console.log("validated " + validatedFields.username, validatedFields.password);
+    const {username , password } = validatedFields
+
+    try {
+        await signIn("credentials", {
+            username,
+            password,
+            redirectTo: callbackUrl || CSO_LOGIN_REDIRECT,
         })
     } catch (error) {
         if (error instanceof AuthError) {
