@@ -2,7 +2,7 @@ import useAuthStore from "@/app/store/index";
 
 const autoGenerateReport = async (reportData: any) => {
     const { fetchWithAuth } = useAuthStore.getState();
-    const url = new URL(`${process.env.NEXT_PUBLIC_API}/reports`);
+    const url = new URL(`${process.env.NEXT_PUBLIC_API}/results`);
 
     // Append query parameters
     url.searchParams.append('gender_ethnicity', reportData.gender_ethnicity);
