@@ -126,7 +126,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Weekly Report',
-    href: '/dashboard/weekly-reports',
+    href: '/dashboard/weekly-report',
     icon: 'report',
     label: 'report'
   },
