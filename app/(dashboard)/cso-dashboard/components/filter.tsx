@@ -60,14 +60,25 @@ const CsoFilterReport: React.FC<FilterProps> = ({ onFilterChange }) => {
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-70 p-4 border rounded bg-gray-50">
+                    <div className="mb-2">
+                        <label className="block text-sm font-medium text-gray-700">Cso Name</label>
+                        <input
+                            type="text"
+                            name="area"
+                            value={filters.area}
+                            onChange={(e) => handleFilterChange('area', e.target.value)}
+                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                        />
+                    </div>
                     <DropdownMenuLabel>Gender/Ethnicity</DropdownMenuLabel>
                     <DropdownMenuSeparator/>
+
                     <Select
                         value={filters.gender_ethnicity}
                         onValueChange={(value) => handleFilterChange('gender_ethnicity', value)}
                     >
                         <SelectTrigger className="w-full">
-                            <SelectValue placeholder="Select Gender/Ethnicity" />
+                            <SelectValue placeholder="Select Gender/Ethnicity"/>
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup>
@@ -80,6 +91,7 @@ const CsoFilterReport: React.FC<FilterProps> = ({ onFilterChange }) => {
                         </SelectContent>
                     </Select>
                     <DropdownMenuSeparator/>
+
                     <div className="mb-2">
                         <label className="block text-sm font-medium text-gray-700">Starting Date</label>
                         <input
