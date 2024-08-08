@@ -96,7 +96,7 @@ const CsoReport: React.FC = () => {
             <h2 className="text-3xl font-bold tracking-tight mb-6">Cso Reports</h2>
             <Tabs defaultValue="auto-generated" value={activeTab} onValueChange={(value) => setActiveTab(value as 'auto-generated' | 'filtered')}>
                 <TabsList className="mb-4">
-                    <TabsTrigger value="auto-generated">Auto-Generated Report</TabsTrigger>
+                    <TabsTrigger value="auto-generated">Public Perception Report</TabsTrigger>
                     <TabsTrigger value="filtered">Filtered Report</TabsTrigger>
                 </TabsList>
                 <TabsContent value="auto-generated">

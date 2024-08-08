@@ -120,7 +120,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Classifier',
-    href: '/dashboard/classifier',
+    href: '/dashboard/classifiers',
     icon: 'classifier',
     label: 'classifier'
   },
@@ -152,7 +152,7 @@ export const navItems: NavItem[] = [
 export const csoNavItems: NavItem[] = [
   {
     title: 'Dashboard',
-    href: '/dashboard',
+    href: '/cso-dashboard',
     icon: 'dashboard',
     label: 'Dashboard'
   },
@@ -161,6 +161,12 @@ export const csoNavItems: NavItem[] = [
     href: '/cso-dashboard/reports',
     icon: 'report',
     label: 'report'
+  },
+  {
+    title: 'Classifiers',
+    href: '/cso-dashboard/classifiers',
+    icon: 'classifier',
+    label: 'classifier'
   },
 
   // {

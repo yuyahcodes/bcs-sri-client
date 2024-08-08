@@ -99,7 +99,7 @@ const CsoForm = ({ className, ...props }: UserAuthFormProps) => {
                                 </FormItem>
                             )}
                         />
-                        <Button className='mt-2 bg-blueGem-400' loading={isLoading}>
+                        <Button className='mt-2 bg-blueGem-600' loading={isLoading}>
                             Login
                         </Button>
 
