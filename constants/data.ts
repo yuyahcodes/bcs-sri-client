@@ -126,7 +126,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Weekly Report',
-    href: '/dashboard/weekly-report',
+    href: '/dashboard/weekly-reports',
     icon: 'report',
     label: 'report'
   },
@@ -142,6 +142,27 @@ export const navItems: NavItem[] = [
     icon: 'kanban',
     label: 'kanban'
   },
+  // {
+  //   title: 'Login',
+  //   href: '/',
+  //   icon: 'login',
+  //   label: 'login'
+  // }
+];
+export const csoNavItems: NavItem[] = [
+  {
+    title: 'Dashboard',
+    href: '/dashboard',
+    icon: 'dashboard',
+    label: 'Dashboard'
+  },
+  {
+    title: 'Reports',
+    href: '/cso-dashboard/reports',
+    icon: 'report',
+    label: 'report'
+  },
+
   // {
   //   title: 'Login',
   //   href: '/',

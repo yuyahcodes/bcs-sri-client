@@ -15,7 +15,7 @@ const generateReport = async (reportData: any) => {
         const data = await response.json();
         return data;
     } catch (error) {
-        console.error('Error generating report:', error);
+        console.error('Error generating reports:', error);
         throw error;
     }
 };
@@ -23,4 +23,4 @@ const generateReport = async (reportData: any) => {
 export default generateReport;
 
 
-//auto generated report
+//auto generated reports

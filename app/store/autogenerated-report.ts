@@ -20,7 +20,7 @@ const autoGenerateReport = async (reportData: any) => {
         });
         return await response.json();
     } catch (error) {
-        console.error('Error generating report:', error);
+        console.error('Error generating reports:', error);
         throw error;
     }
 };

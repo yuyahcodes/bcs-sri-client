@@ -6,6 +6,7 @@ import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {SessionProvider} from "next-auth/react";
 import React from "react";
+import CsoReport from "./report";
 
 const reportData = {
     id: 1,
@@ -75,11 +76,11 @@ const reportData = {
     created_at: "2024-07-13T16:55:48.917951"
 };
 
-const ReportPage: NextPage = () => {
+const CsoReportPage: NextPage = () => {
     return (
         <div>
 
-            <Report />
+            <CsoReport />
 
         </div>
 
@@ -87,4 +88,4 @@ const ReportPage: NextPage = () => {
         ;
 };
 
-export default ReportPage;
+export default CsoReportPage;
